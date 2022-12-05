@@ -1,1 +1,1 @@
-venv/bin/activate
+/home/jithin/code/aoc2022/.venv/bin/activate.fish

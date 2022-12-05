@@ -1,7 +1,8 @@
+from __future__ import annotations
+
 import argparse
 import os.path
 
-import collections
 import pytest
 
 import support
@@ -10,35 +11,21 @@ INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
 
 
 def compute(s: str) -> int:
-    arr = []
-    for x in s.split('\n\n'):
-        c = 0
-        for y in x.split('\n'):
-            if y: c += int(y)
-        arr.append(c)
-    arr.sort(reverse=True)
-    return sum(arr[:3])
+    numbers = support.parse_numbers_split(s)
+    for n in numbers:
+        pass
 
-
+    lines = s.splitlines()
+    for line in lines:
+        pass
+    # TODO: implement solution here!
+    return 0
 
 
 INPUT_S = '''\
-1000
-2000
-3000
 
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000
 '''
-EXPECTED = 45000 
+EXPECTED = 1
 
 
 @pytest.mark.parametrize(
